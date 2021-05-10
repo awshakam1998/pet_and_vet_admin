@@ -1,6 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:pet_and_vet_admin/add_item_secreen.dart';
+import 'package:pet_and_vet_admin/delete_item.dart';
 
 void main()async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -75,27 +76,29 @@ class _MyHomePageState extends State<MyHomePage> {
                     )
                 ),
               ),
-              // Container(
-              //   width: 150,
-              //   height: 150,
-              //   child: Card(
-              //       shape: RoundedRectangleBorder(
-              //           borderRadius: BorderRadius.circular(25)
-              //       ),
-              //       child: Center(
-              //         child: Column(
-              //           mainAxisSize: MainAxisSize.min,
-              //           children: [
-              //             IconButton(
-              //               icon: Icon(Icons.settings),
-              //               onPressed: (){},
-              //             ),
-              //             Text('Manage Items'),
-              //           ],
-              //         ),
-              //       )
-              //   ),
-              // ),
+              Container(
+                width: 150,
+                height: 150,
+                child: Card(
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(25)
+                    ),
+                    child: Center(
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          IconButton(
+                            icon: Icon(Icons.settings),
+                            onPressed: (){
+                              Navigator.push(context, MaterialPageRoute(builder: (context) => DeleteItem(),));
+                            },
+                          ),
+                          Text('Delete Items'),
+                        ],
+                      ),
+                    )
+                ),
+              ),
             ],
           ),
         ));
