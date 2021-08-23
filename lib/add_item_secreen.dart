@@ -3,9 +3,10 @@ import 'package:firebase_database/firebase_database.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:images_picker/images_picker.dart';
 import 'package:path/path.dart';
 import 'package:firebase_storage/firebase_storage.dart';
-import 'package:images_picker/images_picker.dart';
+
 import 'package:pet_and_vet_admin/model/product.dart';
 
 class AddItem extends StatefulWidget {
@@ -89,8 +90,7 @@ class _AddItemState extends State<AddItem> {
       } else {
         print(productId);
         if (_image != null) {
-          String fileName = basename(_image.path);
-          var imageUrl;
+         var imageUrl;
 
           Reference ref = FirebaseStorage.instance
               .ref()
@@ -109,7 +109,7 @@ class _AddItemState extends State<AddItem> {
               price: price,
               productId: productId.toString(),
             );
-            print('consult: ${product.category}');
+            print('product: ${product.category}');
             databaseReference
                 .child('4')
                 .child('data')

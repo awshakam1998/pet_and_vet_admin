@@ -30,9 +30,9 @@ dependencies:
   cupertino_icons: ^1.0.0
   cached_network_image: ^2.5.1
   images_picker: ^0.0.7
+  image_picker: ^0.6.7+12
   firebase_storage: ^7.0.0
   cloud_firestore: ^0.16.0+1
-  image_picker: ^0.6.7+12
   firebase_database: "^6.0.0"
   firebase_core: "^0.7.0"
 
